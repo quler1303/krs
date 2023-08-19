@@ -47,16 +47,19 @@
     }
     
     #choices button {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
         background-color: #db6934;
         color: white;
         border: none;
         margin-bottom: 40px;
-        margin-left: 40px;
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
         padding: 10px 20px;
+        margin-left: 10%;
+        text-align: center;
     }
     
     #choices button:hover {
@@ -70,13 +73,28 @@
     #question {
         color: #902108;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        margin-top: 30px;
     }
     
     #next-button {
         background-color: #736abf;
     }
     
+    #result {
+        color: #ffffff;
+        text-align: center;
+    }
+    
     #claimRewardButton {
+        display: block;
+        align-content: center;
         background-color: #db6934;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 30px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        text-align: center;
     }

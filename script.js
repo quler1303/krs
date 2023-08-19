@@ -133,8 +133,7 @@ function showResult() {
         resultContainer.textContent += " Gratulacje, ukończyłeś/łaś quiz!";
         claimRewardButton.style.display = 'block';
     } else {
-        resultContainer.textContent += " Przykro mi, wynik jest zbyt niski. Możesz spróbować ponownie.";
-        restartButton.style.display = 'block';
+        resultContainer.textContent += " Przykro mi, wynik jest zbyt niski. Możesz spróbować ponownie, odswiezajac okno przegladarki.";
     }
     nextButton.style.display = 'none';
 }
@@ -151,6 +150,6 @@ function restartQuiz() {
 
 startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', showNextQuestion);
-restartButton.addEventListener('click', restartQuiz);
+
 
 showStartScreen();
