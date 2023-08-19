@@ -94,6 +94,7 @@
     }
     
     #result {
+        margin-top: 200px;
         color: #bf259b;
         text-align: center;
     }
@@ -102,7 +103,8 @@
         display: block;
         align-content: center;
         background-color: #db6934;
-        margin-top: 20px;
+        margin-top: 200px;
+        margin-left: 100px;
         margin-bottom: 40px;
         font-size: 30px;
         color: #fff;
