@@ -1,28 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+var audio = document.getElementById("happy");
 
-const obrot = document.querySelector("#obrot");
-const elementDiv = document.querySelector('div');
+// Funkcja do automatycznego odtwarzania po załadowaniu strony
+window.onload = function() {
+    audio.play();
+};
 
-const body = document.querySelector('body');
+// Funkcja do zatrzymywania muzyki
+function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0; // Przewiń do początku
+}
 
-let licznikOdliczanie = 10;
-let licznik = 0;
-let krok = 36;
-
-obrot.addEventListener('click', ()=>{
-    setInterval(() => {
-    elementDiv.style.transform = "rotate"+licznik+"deg)";
-    elementDiv.innerHTML = `<p style="color:white;font-size:200px;font-weight:bold">${licznikOdliczanie}</p>`
-    licznikOdliczanie -=1;
-    if(licznikOdliczanie == 0){
-        licznikOdliczanie = 10;
-    }
-
-    licznik += krok;
-
-},1000);
-
-
-});
-
-});
+// Funkcja do wznowienia odtwarzania po zatrzymaniu
+function playAudio() {
+    audio.play();
+}
