@@ -130,6 +130,7 @@ function showNextQuestion() {
 }
 
 function showResult() {
+    choicesContainer.style.display = 'none';
     questionContainer.style.display = 'none';
     resultContainer.style.display = 'block';
     resultContainer.textContent = `Twój wynik: ${score}/${questions.length}.`;
@@ -138,7 +139,7 @@ function showResult() {
         resultContainer.textContent += " Gratulacje, ukończyłeś/łaś quiz!";
         claimRewardButton.style.display = 'block';
     } else {
-        resultContainer.textContent += " Przykro mi, wynik jest zbyt niski. Możesz spróbować ponownie, odswiezajac okno przegladarki.";
+        resultContainer.textContent += " Przykro mi, wynik jest zbyt niski. Możesz spróbować ponownie, odświeżając okno przeglądarki.";
     }
     nextButton.style.display = 'none';
 }
