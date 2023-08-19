@@ -106,14 +106,14 @@ function checkAnswer(selectedIndex) {
     }
 
     nextButton.style.display = 'block';
-    choicesContainer.childNodes.forEach((choiceButton) => {
-        choiceButton.disabled = true;
-    });
+    // choicesContainer.childNodes.forEach((choiceButton) => {
+    //     choiceButton.disabled = true;
+    // });
     const choiceButtons = document.querySelectorAll('.choice-button');
 
     choiceButtons.forEach(button => {
         button.classList.remove('clicked');
-        button.disabled = true; // Wyłącz przyciski po kliknięciu
+        // button.disabled = true; // Wyłącz przyciski po kliknięciu
     });
 
     const selectedButton = choiceButtons[selectedIndex];
