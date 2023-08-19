@@ -5,4 +5,5 @@ document.addEventListener("DOMContentLoaded", function() {
     svgElement.addEventListener("click", function() {
         audio.play();
     });
+    svgElement.addEventListener("touchstart", playAudio);
 });
