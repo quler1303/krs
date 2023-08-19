@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Moja Strona na iPhone 8</title>
+    <title>Quiz o roku 1993</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Tytuł Sekcji</h1>
-        <svg viewBox="0 0 1241 1064.603" id="click" class="click" xmlns="http://www.w3.org/2000/svg"><path d="M909.032 1045.333H498.756c-77.812 0-140.892-63.08-140.892-140.892s63.08-140.89 140.892-140.89h37.984L208.913 431.044c-26.13-25.597-42.33-61.246-42.33-100.678 0-32.438 10.962-62.316 29.384-86.13l-.24.325.675-.845c25.28-29.672 62.677-48.37 104.443-48.37 37.55 0 71.57 15.114 96.31 39.59l211.326 211.325 210.38-157.8c22.44-16.85 50.766-26.983 81.457-26.983 37.585 0 71.62 15.196 96.296 39.78l-.004-.004c106.436 106.914 188.892 237.796 238.558 383.836l2.083 7.054v.338l3.382 10.708-53.764 16.907-3.325-10.54c-48.836-144.373-126.615-267.8-227.038-368.662l.033.033c-14.42-14.317-34.287-23.166-56.22-23.166-17.953 0-34.52 5.928-47.852 15.932l.206-.148-249.49 187.104L357.07 274.6c-13.777-13.932-32.893-22.56-54.024-22.56-.543 0-1.084.007-1.624.018h.08-.9c-.398-.008-.865-.012-1.334-.012-23.69 0-44.897 10.64-59.1 27.4l-.094.114c-10.67 14-17.097 31.736-17.097 50.973 0 23.706 9.757 45.134 25.476 60.484l.017.016.394.394 422.675 428.31h-172.79c-46.686 0-84.534 37.848-84.534 84.535s37.848 84.535 84.535 84.535H909.03zM297.562 616.46C133.233 616.45.02 483.23.02 318.895c0-164.34 133.224-297.563 297.563-297.563 163.19 0 295.7 131.367 297.545 294.12l.002.175c.056 2.13.087 4.636.087 7.15 0 41.218-8.51 80.448-23.867 116.03l.73-1.9-51.904-21.867c11.808-27.196 18.677-58.874 18.677-92.155 0-2.155-.03-4.304-.086-6.446l.007.315v-.394C537.334 184.246 429.9 77.7 297.58 77.7c-133.215 0-241.206 107.99-241.206 241.205S164.364 560.11 297.578 560.11c.71 0 1.416-.002 2.124-.008h-.108.338c.233.002.51.002.786.002 27.663 0 54.208-4.79 78.85-13.586l-1.638.51 18.54 53.2c-28.533 10.287-61.46 16.233-95.776 16.233h-.862.045z"/></svg>
+    <div id="quiz-container">
+        <div id="start-screen">
+            <h1 style="color: rgb(236, 83, 7);">HAPPY BIRTHDAY! 🥳</h1>
+            <p style="color: #571e00;">Witaj ! Dotarłeś do magicznej karty życia, dzięki której przekraczasz próg nie tylko nowej dekady, ale również nowych przygód, wyzwań i niezapomnianych chwil. Kto by pomyślał, że z chłopca, który bawił się klockami lego i zul przy tym opony
+                od zabawkowych samochodow wyrośnie osoba pełna mądrości, doświadczenia i niezliczonych opowieści do opowiedzenia. Twoja przeszłość kształtuje Cię, ale to, co masz przed sobą, to nowa, błyszcząca karta, gotowa do zapisania kolejnych, niepowtarzalnych
+                rozdziałów. Dlatego z okazji Twoich trzydziestych urodzin chce Ci życzyć nie tylko niekończącej się radości, spelnienia marzen i niesamowitych przezyc, ale również siły, aby pokonywać wszelkie trudności. A teraz przygotuj się na małą niespodziankę!
+                Mam dla Ciebie prezent, ale żeby go otrzymać, będziesz musiał wykazać się odrobiną wiedzy i rozrywki. Czy jesteś gotowy na niezapomnianą podróż przez retrospekcję i zabawę? Z tego quizu dowiesz się, ile pamiętasz z czasów minionych i jak
+                dobrze radzisz sobie z zagadnieniami, które mogą być równie dziwaczne jak sytuacje lat 90. Rozpocznij quiz i przygotuj się na niesamowitą niespodziankę, która czeka na Ciebie po jego ukończeniu! Niech te urodziny przyniosą Ci jeszcze więcej
+                radości, spełnienia i niespodzianek, niż sobie wyobrażasz. Sto lat ! 🥳🎉</p>
+            <button id="start-button">Lecimy z tym</button>
+        </div>
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="next-button">Następne pytanie</button>
+        <div id="result"></div>
+        <button id="restart-button">Powtórz quiz</button>
+        <button id="claimRewardButton" style="display: none;">Odbierz nagrodę</button>
+
     </div>
-    <footer>
-        &copy; 2023 Moja Strona. Wszelkie prawa zastrzeżone.
-    </footer>
+    <script src="script.js"></script>
 </body>
-<audio controls autoplay id="happy">
-    <source src="happy.mp3" type="audio/mpeg">
-  </audio>
-<script src="script.js"></script>
 
 </html>
