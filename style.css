@@ -6,8 +6,8 @@ body {
 }
 
 .container {
-    margin-top: 0px;
-    width: 350px;
+    margin-top: -20px;
+    width: 370px;
     height: 1334px;
     background-color: blue;
 }
