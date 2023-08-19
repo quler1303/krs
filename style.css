@@ -1,11 +1,23 @@
     body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        background-image: linear-gradient(to bottom, #fdc774, #ff3300);
+        font-family: 'Open Sans';
+        background-image: url("bg.jpg");
+        background-repeat: no-repeat;
+        background-color: #44b0ac;
+        background-size: 450px;
+    }
+    
+    .konfetti {
+        width: 400px;
+        top: -400px;
+        position: absolute;
+        pointer-events: none;
+        animation: nutka 4s linear 1s 1 normal;
     }
     
     #quiz-container {
         width: 400px;
         height: 750px;
+        background-color: rgba(255, 255, 255, 0.6);
     }
     
     #start-screen {
@@ -63,7 +75,7 @@
     }
     
     #choices button:hover {
-        background-color: #6ca042;
+        background-color: #953ee1;
     }
     
     #choices button.clicked {
@@ -71,18 +83,18 @@
     }
     
     #question {
-        color: #902108;
+        color: #c02806;
         text-align: center;
         margin-bottom: 50px;
         margin-top: 30px;
     }
     
     #next-button {
-        background-color: #736abf;
+        background-color: #6050ee;
     }
     
     #result {
-        color: #ffffff;
+        color: #bf259b;
         text-align: center;
     }
     
@@ -97,4 +109,15 @@
         border: none;
         cursor: pointer;
         text-align: center;
+    }
+    
+    @keyframes nutka {
+        0% {
+            opacity: 100;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 100;
+            transform: translate(0px, 1000px);
+        }
     }

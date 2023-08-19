@@ -1,16 +1,16 @@
 const questions = [{
-        question: "W 1993 roku miała miejsce kontrowersyjna decyzja dotycząca zakazu pewnej działalności w Internecie. O co dokładnie chodziło?",
-        choices: ["Zakaz kryptografii", "Zakaz handlu online", "Zakaz reklam na stronach internetowych"],
+        question: "Który smoczy kamień pozwala spełnić jedno życzenie?",
+        choices: ["Smoczy Kamień Namekian", " Smoczy Kamień Ziemi", "Smoczy Kamień Porunga"],
         correctIndex: 0
     },
     {
-        question: "Które wielkie przedsiębiorstwo zostało założone przez Jeffa Bezosa?",
-        choices: ["Apple", "Microsoft", "Amazon"],
+        question: "Które zaklęcie jest używane do stworzenia patronusa?",
+        choices: ["Avada Kedavra", "Expelliarmus", "Expecto Patronum"],
         correctIndex: 2
     },
     {
-        question: "Które wydarzenie w 1993 roku przyczyniło się do podpisania Porozumienia z Oslo, które otworzyło drogę do procesu pokojowego między Izraelem a Palestyną",
-        choices: ["Spotkanie w Camp David", "Zamach na World Trade Center", "Tzw. Handshake on the Lawn"],
+        question: "Gdzie znajduje się stolica Australii?",
+        choices: ["Sydney", "Melbourne", "Canberra"],
         correctIndex: 2
     }, {
         question: "Który klub zdobył Ligę Mistrzów UEFA w sezonie 1992/1993?",
@@ -25,20 +25,20 @@ const questions = [{
         choices: ["Silny w wierzeniach", "Pokojowy", "Miłość do natury"],
         correctIndex: 0
     }, {
-        question: "Który znany dokument znaleziono w 1993 roku w jednym z budynków kościoła w Polsce, zawierający opis legendy o Bolesławie Chrobrym i pięciu aniołach?",
-        choices: ["Akt Czarnobylski", "Papirus Grodziski", "Rocznik Turoszowski"],
-        correctIndex: 2
+        question: "Który przedmiot był wykładany przez Sybillę Trelawney w Hogwarcie?",
+        choices: ["Eliksiry", "Wróżbiarstwo", "Opieka nad Magicznymi Stworzeniami"],
+        correctIndex: 1
     }, {
-        question: "Kto został prezydentem Południowej Afryki, stając się pierwszym prezydentem kraju wybranym w drodze powszechnych wyborów?",
-        choices: ["Nelson Mandela", "Desmond Tutu", "F.W. de Klerk"],
+        question: "Które państwo jest znane jako Kraj Kwitnącej Wiśni?",
+        choices: ["Japonia", "Chiny", "Korea Południowa"],
         correctIndex: 0
     }, {
         question: "Jaka popularna gra konsolowa została wydana w 1993 roku, przedstawiając dwie postacie, które stają do walki?",
         choices: ["Street Fighter II", "Mortal Kombat", "Tekken"],
         correctIndex: 1
     }, {
-        question: "Jakie jest pochodzenie imienia 'Krystian'?",
-        choices: ["Polskie", "Angielskie", "Niemieckie"],
+        question: "W którym państwie znajduje się Machu Picchu, starożytne miasto Inków?",
+        choices: ["Peru", "Kolumbia", "Boliwia"],
         correctIndex: 0
     }, {
         question: "Który zawodnik zdobył Złotą Piłkę FIFA w 1993 roku?",
@@ -56,6 +56,11 @@ const resultContainer = document.getElementById('result');
 const nextButton = document.getElementById('next-button');
 const restartButton = document.getElementById('restart-button');
 const claimRewardButton = document.getElementById('claimRewardButton');
+const rewardLink = 'https://ticket.energylandia.pl/file/Bilety.pdf?type=oa&id=4107719&hash=5d10561a4a2514aababbc8d8113699221e29f0996be84c66fe628e07c4f61235&guid=d502875e-238a-4a5f-8d5e-c08f3294cd4e'; // Zastąp adresem URL swoją właściwą nagrodą
+
+claimRewardButton.addEventListener('click', () => {
+    window.location.href = rewardLink;
+});
 
 let currentQuestion = 0; // -1 oznacza ekran startowy
 let score = 0;
@@ -127,7 +132,7 @@ function showNextQuestion() {
 function showResult() {
     questionContainer.style.display = 'none';
     resultContainer.style.display = 'block';
-    resultContainer.textContent = `Twój wynik: ${score}/${questions.length}`;
+    resultContainer.textContent = `Twój wynik: ${score}/${questions.length}.`;
 
     if (score >= 8) {
         resultContainer.textContent += " Gratulacje, ukończyłeś/łaś quiz!";
